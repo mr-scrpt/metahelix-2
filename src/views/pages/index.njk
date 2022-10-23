@@ -6,10 +6,17 @@
     {% include "sections/header-section.njk" %}
     {% set inject = {
     wrapper: 'wrap',
-    sectionClass: 'page__clump'
+    sectionClass: 'page__clump',
+    deco: true
     } %}
     {% include "sections/banner-section.njk" %}
-    <!-- {% include "blocks/header/header.njk" %} -->
+    {% set inject = {
+    wrapper: 'wrap',
+    sectionTitle: 'About',
+    sectionClass: '',
+    deco: true
+    } %}
+    {% include "sections/about-section.njk" %}
     <!-- {% include "blocks/about/about.njk" %} -->
     <!-- {% include "blocks/token/token.njk" %} -->
     <!-- {% include "sections/section-bg.njk" %} -->

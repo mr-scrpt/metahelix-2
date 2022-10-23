@@ -10,9 +10,13 @@
   }
 
   &__img {
-    //max-width: 190px;
+    max-width: 240px;
     //height: 190px;
+    @include bp480-block() {
+      max-width: 100%;
+    }
   }
+
   &__text {
     color: $color_dark;
 

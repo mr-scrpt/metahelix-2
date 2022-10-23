@@ -29,18 +29,21 @@
       background-size: cover;
       @include bp994-block() {
         bottom: -100px;
+
         width: 400px;
         height: 600px;
       }
       @include bp1440-block() {
+        bottom: -400px;
+
         width: 580px;
         height: 780px;
-        bottom: -400px;
       }
       @include bp1620-block() {
+        bottom: -800px;
+
         width: 859px;
         height: 1251px;
-        bottom: -800px;
       }
     }
 
@@ -66,18 +69,25 @@
         height: 600px;
       }
       @include bp1440-block() {
+        bottom: -500px;
+
         width: 600px;
         height: 800px;
-        bottom: -500px;
       }
       @include bp1620-block() {
+        bottom: -1200px;
+
         width: 807px;
         height: 1790px;
-        bottom: -1200px;
       }
     }
   }
-
+  &__section {
+    margin-bottom: 50px;
+    @include bp994-block() {
+      margin-bottom: 50px;
+    }
+  }
   &__section-bg {
     position: relative;
 
