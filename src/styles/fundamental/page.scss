@@ -10,12 +10,12 @@
     overflow: hidden;
   }
 
-  &__about {
+  &__clump {
     position: relative;
 
     &:after {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
 
       width: 200px;
@@ -28,20 +28,19 @@
 
       background-size: cover;
       @include bp994-block() {
-        top: -100px;
-
+        bottom: -100px;
         width: 400px;
         height: 600px;
       }
       @include bp1440-block() {
         width: 580px;
         height: 780px;
+        bottom: -400px;
       }
       @include bp1620-block() {
-        top: -450px;
-
         width: 859px;
         height: 1251px;
+        bottom: -800px;
       }
     }
 
@@ -69,12 +68,12 @@
       @include bp1440-block() {
         width: 600px;
         height: 800px;
+        bottom: -500px;
       }
       @include bp1620-block() {
-        bottom: -500px;
-
         width: 807px;
         height: 1790px;
+        bottom: -1200px;
       }
     }
   }

@@ -1,7 +1,8 @@
-<section class="setion page__section">
-  <div class="section__inner">
-    <div class="layout__{{inject.wrapper}}">
-      {% block section %}{% endblock section %}
+<section class="section page__sectio {{ inject.sectionClass }}">
+    <div class="section__inner">
+        <div class="layout__{{ inject.wrapper }}">
+            {% block section %}
+            {% endblock section %}
+        </div>
     </div>
-  </div>
 </section>

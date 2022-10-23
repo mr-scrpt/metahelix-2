@@ -1,14 +1,5 @@
 .banner {
   &__inner {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    @include bp994-block() {
-      padding-top: 120px;
-      padding-bottom: 120px;
-    }
-  }
-
-  &__box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -18,7 +9,7 @@
     /*  position: relative;
     z-index: -1; */
 
-    display: flex;
+    display: none;
     justify-content: center;
 
     width: 100%;
@@ -41,16 +32,16 @@
     }
     @include bp994-block() {
       margin-bottom: 50px;
+      display: flex;
     }
   }
   &__title {
     text-transform: uppercase;
-
     font-size: 48px;
     font-weight: 600;
     line-height: 48px;
     @include bp994-block() {
-      font-size: 120px;
+      font-size: 150px;
       font-weight: 600;
       line-height: 120px;
     }
@@ -73,44 +64,6 @@
   }
   &__deco {
     margin-bottom: 50px;
-    @include bp994-block() {
-      margin-bottom: 80px;
-    }
-  }
-
-  &__sub-text {
-    width: 100%;
-    margin-bottom: 30px;
-
-    text-align: center;
-
-    font-size: 18px;
-    line-height: 18px;
-
-    @include bp994-block() {
-      margin-bottom: 50px;
-
-      font-size: 24px;
-      line-height: 24px;
-    }
-  }
-
-  &__numbers {
-    width: 100%;
-    margin-bottom: 30px;
-
-    text-align: center;
-
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 72px;
-
-    @include bp994-block() {
-      margin-bottom: 50px;
-
-      font-size: 128px;
-      line-height: 128px;
-    }
   }
 
   &__button {
@@ -118,5 +71,6 @@
     justify-content: center;
 
     width: 100%;
+    margin-bottom: 50px;
   }
 }

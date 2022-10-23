@@ -4,8 +4,12 @@
     wrapper: 'wrap'
     } %}
     {% include "sections/header-section.njk" %}
+    {% set inject = {
+    wrapper: 'wrap',
+    sectionClass: 'page__clump'
+    } %}
+    {% include "sections/banner-section.njk" %}
     <!-- {% include "blocks/header/header.njk" %} -->
-    <!-- {% include "blocks/banner/banner.njk" %} -->
     <!-- {% include "blocks/about/about.njk" %} -->
     <!-- {% include "blocks/token/token.njk" %} -->
     <!-- {% include "sections/section-bg.njk" %} -->

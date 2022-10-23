@@ -2,6 +2,11 @@
   &__inner {
     display: flex;
     justify-content: center;
+
+    margin-right: -32px;
+    @include bp994-block() {
+      margin-right: 0;
+    }
   }
 
   &__img {

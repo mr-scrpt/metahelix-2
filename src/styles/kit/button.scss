@@ -1,6 +1,8 @@
 .button {
   position: relative;
 
+  display: inline-flex;
+
   align-items: center;
 
   justify-content: center;
@@ -8,7 +10,6 @@
   margin: 0;
   padding: 0;
 
-  display: inline-flex;
   cursor: poiter;
   user-select: none;
   white-space: nowrap;
@@ -17,7 +18,7 @@
   color: #fff;
 
   outline: 0;
-  background-color: $color_gray;
+  background-color: $color_passive;
 
   touch-action: manipulation;
 
@@ -28,6 +29,7 @@
     overflow: hidden;
 
     vertical-align: top;
+    text-transform: uppercase;
 
     color: black;
 
@@ -93,15 +95,20 @@
 .button_size_xl {
   border-radius: 32px;
 
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 22px;
+  line-height: 22px;
+  @include bp994-block() {
+    border-radius: 85px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .button_size_xl .button__text {
-  margin: 14px 100px;
+  margin: 20px 100px;
 
   @include bp994-block() {
-    margin: 12px 90px;
+    margin: 30px 160px;
   }
 }
 /*XL - КОНЕЦ*/
