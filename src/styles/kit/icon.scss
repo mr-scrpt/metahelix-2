@@ -1,0 +1,73 @@
+.icon {
+  display: inline-block;
+
+  min-width: 1em;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.icon:empty:after {
+  visibility: hidden;
+
+  content: '\00A0';
+}
+
+.icon > img,
+.icon > svg {
+  margin: -5.15em 0 -5em;
+
+  vertical-align: middle;
+}
+
+/* .icon.icon_policy {
+  width: 43px;
+  height: 43px;
+
+  background-image: url('../img/icons/icon_policy.png');
+} */
+.icon.icon_burger {
+  width: 32px;
+  height: 22px;
+
+  background: $color_light;
+  mask-image: url('../img/icons/icon_burger.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+.icon.icon_close {
+  width: 60px;
+  height: 60px;
+
+  background: $color_passive;
+  mask-image: url('../img/icons/icon_close.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+.icon.icon_discord {
+  width: 37px;
+  height: 27px;
+
+  background: $color_light;
+  mask-image: url('../img/icons/icon__discord.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  // &_passive {
+  //   background: $color_passive;
+  // }
+}
+.icon.icon_twitter {
+  width: 37px;
+  height: 27px;
+
+  background: $color_light;
+  mask-image: url('../img/icons/icon__twitter.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  &_passive {
+    background: $color_passive;
+  }
+}

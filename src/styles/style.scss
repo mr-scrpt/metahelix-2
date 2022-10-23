@@ -1,0 +1,64 @@
+/* Библиотеки */
+@import './lib/smart-grid';
+
+/* INIT */
+@import './preset/reset';
+@import './preset/var';
+@import './preset/mixins';
+@import './preset/fonts';
+@import './preset/animation';
+@import './preset/block-s';
+
+/* Фундоментальные Блоки */
+@import './fundamental/page';
+@import './fundamental/layout';
+@import './fundamental/header';
+@import './fundamental/footer';
+
+/* Кит */
+@import './kit/button';
+@import './kit/checkbox';
+@import './kit/deco';
+@import './kit/form';
+@import './kit/icon';
+@import './kit/input';
+@import './kit/label';
+@import './kit/link';
+@import './kit/relative-box';
+@import './kit/text';
+@import './kit/textarea';
+@import './kit/img';
+@import './kit/title';
+@import './kit/paragraph';
+
+@import './kit/logo';
+/* Блоки Верстки */
+
+@import './custom/section';
+@import './custom/banner';
+@import './custom/about';
+@import './custom/token';
+@import './custom/diagram';
+@import './custom/pia';
+@import './custom/phases';
+@import './custom/phase-item';
+@import './custom/benefit';
+@import './custom/benefit-item';
+@import './custom/work';
+@import './custom/work-item';
+@import './custom/menu';
+/* Навигация */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: auto;
+  min-height: 100%;
+  //overflow-y: scroll;
+}
+
+body {
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+}

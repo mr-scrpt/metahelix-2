@@ -1,0 +1,14 @@
+.link {
+  display: inline;
+
+  text-decoration: none;
+
+  color: $color_blue_light_2;
+
+  &:hover {
+    cursor: pointer;
+
+    color: $color_blue_light;
+  }
+  @include ts(color);
+}

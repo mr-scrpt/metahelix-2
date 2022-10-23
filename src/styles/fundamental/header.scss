@@ -1,0 +1,86 @@
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__logo {
+    width: calc(100% - 32px);
+    @include bp994-block() {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    @include bp1440-block() {
+      width: calc(300px - 15px);
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  }
+  &__menu {
+    display: flex;
+
+    align-items: center;
+
+    width: 32px;
+    @include bp994-block() {
+      width: 100%;
+    }
+    @include bp1440-block() {
+      width: calc(100% - 300px - 15px);
+      margin-left: 15px;
+    }
+  }
+}
+
+// .header {
+//   &__inner {
+//     display: flex;
+//     justify-content: center;
+
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+
+//     background-color: $color_light;
+//   }
+
+//   &__box {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     max-width: 200px;
+//   }
+
+//   &__logo {
+//     position: relative;
+
+//     padding-right: 30px;
+//     &:after {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+
+//       width: 2px;
+//       height: 100%;
+
+//       content: '';
+
+//       background-color: $color_blue;
+//     }
+//   }
+
+//   &__text {
+//     position: relative;
+
+//     padding-left: 30px;
+
+//     color: $color_blue_light_2;
+
+//     font-size: 14px;
+//     font-weight: 700;
+//   }
+// }

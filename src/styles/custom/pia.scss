@@ -1,0 +1,118 @@
+/* @property --p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+ */
+.pie {
+  --p: 90;
+
+  --b: 60px;
+  --c: #399cdc;
+  --w: 250px;
+  --r: 0;
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  display: inline-grid;
+
+  width: var(--w);
+
+  transform: translate(-50%, -50%);
+  //margin: 5px;
+
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  aspect-ratio: 1;
+  place-content: center;
+
+  @include bp994-block() {
+    width: var(--d-w);
+  }
+  //background: linear-gradient(218.07deg, #399CDC 6.37%, #031F31 114.95%);
+}
+.pie:before,
+.pie:after {
+  position: absolute;
+
+  content: '';
+
+  border-radius: 50%;
+}
+.pie:before {
+  transform: rotate(var(--r));
+
+  opacity: 0.8;
+  //background: linear-gradient(218.07deg, #399cdc 6.37%, #031f31 114.95%);
+  background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b)
+      var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  inset: 0;
+  mix-blend-mode: multiply;
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+
+  @include bp994-block() {
+    background: radial-gradient(farthest-side, var(--d-c) 98%, #0000)
+        top/var(--d-b) var(--d-b) no-repeat,
+      conic-gradient(var(--d-c) calc(var(--d-p) * 1%), #0000 0);
+    inset: 0;
+    mix-blend-mode: multiply;
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(99% - var(--d-b)),
+      #000 calc(100% - var(--d-b))
+    );
+    mask: radial-gradient(
+      farthest-side,
+      #0000 calc(99% - var(--d-b)),
+      #000 calc(100% - var(--d-b))
+    );
+  }
+}
+.pie:after {
+  transform: rotate(calc(var(--p) * 3.6deg))
+    translateY(calc(50% - var(--w) / 2));
+
+  background: var(--c);
+  inset: calc(50% - var(--b) / 2);
+
+  @include bp994-block() {
+    transform: rotate(calc(var(--d-p) * 3.6deg))
+      translateY(calc(50% - var(--d-w) / 2));
+
+    background: var(--d-c);
+    inset: calc(50% - var(--d-b) / 2);
+  }
+}
+.animate {
+  animation: p 1s 0.5s both;
+}
+.no-round:before {
+  background-size: 0 0, auto;
+}
+.no-round:after {
+  content: none;
+}
+@keyframes p {
+  from {
+    --p: 0;
+    --d-p: 0;
+  }
+}
+
+body {
+  background: #ddd;
+}

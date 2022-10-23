@@ -1,0 +1,20 @@
+{
+  "menu": [
+    {
+      "name": "About",
+      "href": "/holders"
+    },
+    {
+      "name": "Holders benefits",
+      "href": "/holders"
+    },
+    {
+      "name": "Tokenomics",
+      "href": "/about"
+    },
+    {
+      "name": "HelixMap",
+      "href": "/helix-map"
+    }
+  ]
+}

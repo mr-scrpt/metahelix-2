@@ -1,0 +1,25 @@
+<nav class="menu block-s {{ inject.parentClass }}"
+     data-adaptive-width="{{ inject.menuBrakePoint }}">
+    <div class="menu__inner block-s__inner">
+        <div class="block-s__controller menu__controller">
+            <div class="menu__controller-icon">
+                <span class="icon icon_burger"></span>
+            </div>
+        </div>
+        <div class="block-s__body menu__body">
+            <div class="menu__close block-s__controller">
+                <span class="icon icon_close"></span>
+            </div>
+            <div class="menu__list">
+                {% for item in menu.menu %}
+                    {% include "blocks/menu/menu-item.njk" %}
+                {% endfor %}
+            </div>
+            <div class="menu__soc">
+                {% for item in icon.icon %}
+                    {% include "blocks/menu/menu-item-icon.njk" %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,23 @@
+.work-item {
+  &__inner {
+    display: flex;
+    align-items: center;
+    //overflow: hidden;
+    justify-content: center;
+  }
+
+  &__img {
+    transition: all 0.3s;
+
+    border-radius: 40px;
+  }
+}
+
+.work-item.work-item_init {
+}
+
+.work-item.work-item_active {
+  .work-item__img {
+    border-radius: 50%;
+  }
+}

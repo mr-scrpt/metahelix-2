@@ -1,0 +1,6 @@
+// import './modules/animation.js'
+// import './modules/diagram.js'
+// import './modules/phase.js'
+// import './modules/benefit.js'
+// import './modules/work.js'
+import './modules/block-s.js'

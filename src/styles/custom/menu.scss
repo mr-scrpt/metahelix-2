@@ -1,0 +1,100 @@
+.menu {
+  &__inner {
+    display: flex;
+
+    width: 100%;
+  }
+
+  &__controller-icon {
+    display: flex;
+    align-items: center;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    background: $color_light;
+    @include bp994-block() {
+      flex-direction: row;
+      border-radius: 50px;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 50px;
+    padding-left: 50px;
+
+    @include bp994-block() {
+      flex-direction: row;
+
+      padding-right: 0;
+      padding-left: 0;
+    }
+    // border-radius: 100px;
+  }
+  &__soc {
+    display: flex;
+
+    padding-right: 50px;
+    padding-left: 50px;
+    @include bp994-block() {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__item-text {
+    padding: 15px 10px;
+
+    transition: color $th;
+
+    color: $color_passive;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    &:hover {
+      color: $color_blue;
+    }
+    @include bp994-block() {
+      padding: 20px;
+
+      font-size: 18px;
+    }
+    @include bp994-block() {
+      font-size: 24px;
+    }
+  }
+  &__item-icon {
+    padding: 30px 10px;
+    @include bp994-block() {
+      padding: 20px;
+    }
+  }
+  &__icon {
+    &.icon {
+      width: 50px;
+      height: 35px;
+
+      transition: background $th;
+
+      background: $color_passive;
+      &:hover {
+        background: $color_blue;
+      }
+    }
+  }
+}

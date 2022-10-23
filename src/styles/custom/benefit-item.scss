@@ -1,0 +1,129 @@
+.benefit-item {
+  &__inner {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__img-cell {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      content: '';
+
+      border-radius: 20px;
+      /* background: linear-gradient(
+        180deg,
+        #399cdc 0%,
+        rgba(57, 156, 220, 0) 100%
+      ); */
+      background: linear-gradient(
+        180deg,
+        #17376b 0%,
+        rgba(57, 156, 220, 0) 100%
+      );
+
+      box-shadow: 0px 28px 23px 11px rgba(0, 0, 0, 0.15);
+      mix-blend-mode: multiply;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    @include bp768-block() {
+      position: absolute;
+      left: 0;
+
+      width: calc(250px - 30px);
+      margin-right: 30px;
+      margin-bottom: 0;
+
+      transition: all 0.3s;
+    }
+    @include bp994-block() {
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    z-index: 1;
+
+    width: 130px;
+    height: 130px;
+
+    @include bp768-block() {
+      position: absolute;
+
+      bottom: 50%;
+      left: 45px;
+
+      transform: translateY(50%);
+    }
+  }
+
+  &__img {
+  }
+
+  &__text-cell {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    text-align: center;
+
+    @include bp768-block() {
+      align-items: center;
+      justify-content: flex-start;
+
+      width: calc(100% - 30px - 250px - 30px);
+      height: 250px;
+      margin-left: 280px;
+
+      text-align-last: left;
+
+      border-bottom: none;
+    }
+  }
+  &__text {
+    max-width: 350px;
+    padding-bottom: 15px;
+
+    text-align: justify;
+
+    border-bottom: 2px solid $color_light;
+    @include bp768-block() {
+      //max-width: 600px;
+      max-width: 100%;
+
+      padding-bottom: 0;
+
+      border-bottom: none;
+    }
+  }
+}
+
+.benefit-item.benefit-item_init {
+}
+.benefit-item.benefit-item_active {
+  .benefit-item__img-cell {
+    width: 100%;
+  }
+}

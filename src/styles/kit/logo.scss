@@ -1,0 +1,17 @@
+.logo {
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    //max-width: 190px;
+    //height: 190px;
+  }
+  &__text {
+    color: $color_dark;
+
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

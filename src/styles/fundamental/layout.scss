@@ -1,0 +1,21 @@
+.layout {
+  &__inner {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100%;
+
+    color: #000;
+  }
+
+  &__wrap {
+    @include wrapper;
+  }
+
+  &__full {
+    max-width: 1920px;
+  }
+}

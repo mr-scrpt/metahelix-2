@@ -1,0 +1,99 @@
+.phases {
+  &__inner {
+    display: flex;
+  }
+  &__box {
+    @include bp994-block() {
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    @include bp994-block() {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__deco {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 40px;
+
+    text-align: center;
+    @include bp994-block() {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    @include bp994-block() {
+      max-width: 880px;
+      margin-right: -50px;
+      margin-left: -50px;
+    }
+    @include bp1440-block() {
+      max-width: 100%;
+      margin-right: -80px;
+      margin-left: -80px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    margin-bottom: 140px;
+    &:first-child {
+      &::after {
+        position: absolute;
+        z-index: 1;
+        bottom: -70px;
+        left: 50%;
+
+        width: 78px;
+        height: 49px;
+
+        content: '';
+        transform: translate(-50%, 50%);
+
+        background: url('/img/icons/icon__eth.svg') no-repeat;
+        @include bp994-block() {
+          right: -50px;
+          bottom: 50%;
+
+          left: auto;
+
+          transform: translate(50%, 50%);
+        }
+        @include bp1440-block() {
+          right: -80px;
+        }
+      }
+    }
+    @include bp994-block() {
+      width: calc(50% - 100px);
+      margin-right: 50px;
+      margin-bottom: 50px;
+      margin-left: 50px;
+    }
+    @include bp1440-block() {
+      width: calc(50% - 160px);
+      margin-right: 80px;
+      margin-left: 80px;
+    }
+  }
+}

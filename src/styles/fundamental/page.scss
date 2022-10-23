@@ -1,0 +1,108 @@
+.page {
+  position: relative;
+  &_theme {
+    color: $color_light;
+    background: $gradient_bg;
+
+    font: 14px / 2.14 'DM Sans', sans-serif;
+  }
+  &_overflow {
+    overflow: hidden;
+  }
+
+  &__about {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 200px;
+      height: 200px;
+
+      content: '';
+
+      background: url('/img/bg/bg_spot_1.png') right no-repeat;
+      mix-blend-mode: multiply;
+
+      background-size: cover;
+      @include bp994-block() {
+        top: -100px;
+
+        width: 400px;
+        height: 600px;
+      }
+      @include bp1440-block() {
+        width: 580px;
+        height: 780px;
+      }
+      @include bp1620-block() {
+        top: -450px;
+
+        width: 859px;
+        height: 1251px;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      right: 0;
+      bottom: -200px;
+
+      /* width: 807px;
+      height: 1790px; */
+
+      width: 200px;
+      height: 400px;
+
+      content: '';
+
+      background: url('/img/bg/bg_spot_2.png') right no-repeat;
+      background-size: cover;
+
+      mix-blend-mode: multiply;
+      @include bp994-block() {
+        width: 400px;
+        height: 600px;
+      }
+      @include bp1440-block() {
+        width: 600px;
+        height: 800px;
+      }
+      @include bp1620-block() {
+        bottom: -500px;
+
+        width: 807px;
+        height: 1790px;
+      }
+    }
+  }
+
+  &__section-bg {
+    position: relative;
+
+    margin-top: -1000px;
+    //margin-bottom: -1000px;
+    padding-top: 1000px;
+    //padding-bottom: 1000px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: '';
+
+      background: url('/img/bg/bg_big.png') no-repeat;
+      mix-blend-mode: multiply;
+    }
+  }
+  &__footer {
+    margin-top: 20px;
+  }
+}
