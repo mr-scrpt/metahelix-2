@@ -1,0 +1,17 @@
+<div class="feature__item feature-item">
+    <div class="feature-item__inner">
+        <div class="feature-item__imgcell">
+            <div class="feature-item__imgbox">
+                <img src="/img/feature/feature_{{ loop.index }}.svg"
+                     alt="{{ item.title }}"
+                     class="feature-item__img img">
+            </div>
+        </div>
+        <div class="feature-item__textcell">
+            <div class="feature-item__title">{{ item.title }}</div>
+            <div class="paragraph paragraph_size_s">
+                {% for paragraph in item.text %}<p class="paragraph__item">{{ paragraph }}</p>{% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
