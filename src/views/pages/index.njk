@@ -17,7 +17,13 @@
     deco: true
     } %}
     {% include "sections/about-section.njk" %}
-    <!-- {% include "blocks/about/about.njk" %} -->
+    {% set inject = {
+    wrapper: 'wrap',
+    sectionTitle: 'Feature',
+    sectionClass: '',
+    deco: true
+    } %}
+    {% include "sections/feature-section.njk" %}
     <!-- {% include "blocks/token/token.njk" %} -->
     <!-- {% include "sections/section-bg.njk" %} -->
     <!-- {% include "blocks/footer/footer.njk" %} -->

@@ -4,7 +4,10 @@
             <div class="feature-item__imgbox">
                 <img src="/img/feature/feature_{{ loop.index }}.svg"
                      alt="{{ item.title }}"
-                     class="feature-item__img img">
+                     class="feature-item__img feature-item__img_init img">
+                <img src="/img/feature/feature_{{ loop.index }}_h.svg"
+                     alt="{{ item.title }}"
+                     class="feature-item__img feature-item__img_hover img">
             </div>
         </div>
         <div class="feature-item__textcell">

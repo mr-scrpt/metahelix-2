@@ -1,11 +1,24 @@
 .paragraph {
-  letter-spacing: -0.01em;
+  &__item {
+    margin-bottom: 25px;
 
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    @include bp994-block() {
+      margin-bottom: 50px;
+
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+.paragraph.paragraph_size_s .paragraph__item {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 15px;
   @include bp994-block() {
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }

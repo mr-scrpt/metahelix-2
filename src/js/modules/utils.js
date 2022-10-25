@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
 export const hoverElement = (className) => {
+  console.log('in module')
   const selector = `.${className}`
   const init = `${className}_init`
   const active = `${className}_active`

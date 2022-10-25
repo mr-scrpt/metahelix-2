@@ -2,6 +2,7 @@
 $color_light: #fff;
 $color_passive: #b8b8b8;
 $color_dark: #000;
+$color_dark_2: #1e2a31;
 $color_blue: #353945;
 $color_gray: rgba($color_light, 0.5);
 $color_blue_light: #4fbbeb;
@@ -11,6 +12,14 @@ $color_green_dark: #30fdd9;
 $color_yellow: #e2cf22;
 
 $gradient_bg: linear-gradient(
+    212.99deg,
+    #111631 -12.11%,
+    #317296 16.63%,
+    #085788 50.64%,
+    #085788 71.51%
+  ),
+  #d9d9d9;
+$gradient_bg_tmp: linear-gradient(
   195.1deg,
   #111631 10.4%,
   #317296 38.18%,

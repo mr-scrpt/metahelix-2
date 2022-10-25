@@ -4,3 +4,4 @@
 // import './modules/benefit.js'
 // import './modules/work.js'
 import './modules/block-s.js'
+import './modules/feature.js'

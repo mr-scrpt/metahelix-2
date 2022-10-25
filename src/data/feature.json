@@ -1,0 +1,44 @@
+{
+  "feature_list": [
+    {
+      "title": "Sales, Minting, and Listings Announcers",
+      "text": [
+        "Track multiple collections and announce any sale, live minting, or new listing to your Discord community as soon as they happen.",
+        "Easily customize the attributes you want to display, descriptions, and more. This module integrates with our Account Verification module to display the owner's @Username, as well as our Rarity module to display ranking on every listing or sale."
+      ]
+    },
+    {
+      "title": "Role Verification",
+      "text": [
+        "Seamlessly integrate role verification into your Discord server in seconds, without waiting for setup, or granting anyone admin permissions to your server.",
+        "Roles are granted in seconds after user verification, and importantly, removed just as quickly. No more waiting for 12 hours after a transfer for roles to update."
+      ]
+    },
+    {
+      "title": "Marketplace Data Aggregation",
+      "text": [
+        "Track the performance of your NFTs across all supported marketplaces in real-time."
+      ]
+    },
+    {
+      "title": "Twitter Integration",
+      "text": [
+        "Connect multiple twitter accounts to MetaHelix to easily cross-post any NFT sale, live mint, or new listing announcement directly to Twitter."
+      ]
+    },
+    {
+      "title": "In-Discord Rarity Queries",
+      "text": [
+        "Easily calculate rarity data for your collection with a single click, calculating statistical rarity values for your entire collection with rankings.",
+        "Rarity data integrates seamlessly throughout the MetaHelix ecosystem, including our Sales and Listing announcers, and even Account Verification by letting users query NFTs by Discord @Usernames."
+      ]
+    },
+    {
+      "title": "Secure Web-based Admin Panel",
+      "text": [
+        "You don't have to contact anyone to add a new module, create a collection, update your marketplace, select an integration, or anything else.",
+        "All MetaHelix functionalities are available through a web-based Admin-only control panel with live previews, documentation, and more."
+      ]
+    }
+  ]
+}
