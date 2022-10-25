@@ -11,6 +11,12 @@
       font-size: 30px;
       line-height: 40px;
     }
+    &_single {
+      margin-bottom: 0;
+      @include bp994-block() {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .paragraph.paragraph_size_s .paragraph__item {

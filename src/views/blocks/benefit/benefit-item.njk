@@ -1,29 +1,19 @@
-<div
-  class="benefit-item benefit-item_init {{inject.parentClass}}"
-  data-aos="fade-up"
-  data-aos-duration="800"
-  data-aos-delay="{{ loop.index * 100}}"
->
-  <div class="benefit-item__inner">
-    <div class="benefit-item__img-cell">
-      <div class="benefit-item__img-box deco__bg_around">
-        <img
-          src="/img/benefits/benefit_{{loop.index}}.svg"
-          alt=""
-          class="benefit-item__img img"
-        >
-      </div>
+<div class="benefit-item benefit-item_init benefit__item"
+     data-aos="fade-up"
+     data-aos-duration="800"
+     data-aos-delay="{{ loop.index * 100 }}">
+    <div class="benefit-item__inner">
+        <div class="benefit-item__img-cell">
+            <div class="benefit-item__img-box">
+                <img src="/img/benefits/benefit_{{ loop.index }}.svg"
+                     alt=""
+                     class="benefit-item__img img">
+            </div>
+        </div>
+        <div class="benefit-item__text-cell">
+            <div class="benefit-item__text paragraph">
+                <p class="paragraph__item paragraph__item_single">{{ item.text }}</p>
+            </div>
+        </div>
     </div>
-    <div class="benefit-item__text-cell">
-      <div class="benefit-item__text">
-
-        <p class="paragraph">
-          {% for text in benefit.text %}
-          {{text | safe}}
-          {% endfor %}
-
-        </p>
-      </div>
-    </div>
-  </div>
 </div>

@@ -7,4 +7,5 @@ export const data = {
   menu: JSON.parse(readFileSync(`${srcFolder}/data/menu.json`, 'utf8')),
   icon: JSON.parse(readFileSync(`${srcFolder}/data/icon.json`, 'utf8')),
   feature: JSON.parse(readFileSync(`${srcFolder}/data/feature.json`, 'utf8')),
+  benefit: JSON.parse(readFileSync(`${srcFolder}/data/benefit.json`, 'utf8')),
 }

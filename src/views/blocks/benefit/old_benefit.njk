@@ -1,0 +1,30 @@
+<section class="benefit page__benefit section">
+  <div class="section__inner">
+    <div class="section__box layout__wrap">
+      <div class="section__title title title_main">
+        <div class="title__text">
+          Holders benefits
+        </div>
+      </div>
+      <div class="section__deco">
+        <img
+          src="/img/icons/icon__flower.svg"
+          alt=""
+          class="deco__pattern img section__img"
+        >
+      </div>
+
+      <div class="benefit__text">Holders of Helix NFT:</div>
+
+      <div class="benefit__list">
+        {% set inject = {
+        parentClass: "benefit__item "
+        } %}
+        {% for benefit in benefit.benefit_list %}
+        {% include "blocks/benefit/benefit-item.njk" %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
