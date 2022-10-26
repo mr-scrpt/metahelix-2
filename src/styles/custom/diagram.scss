@@ -1,2 +1,12 @@
 .diagram {
+  &__circle {
+    width: 150px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
 }

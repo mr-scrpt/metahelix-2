@@ -71,3 +71,13 @@
     background: $color_passive;
   }
 }
+
+.icon.icon_control {
+  width: 55px;
+  height: 55px;
+
+  background: $color_light;
+  mask-image: url('../img/icons/icon_control.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
