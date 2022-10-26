@@ -1,72 +1,14 @@
-<section class="token page__token token_init section">
-  <div class="section__inner">
-    <div class="section__box layout__wrap">
-      <div class="section__title title title_main">
-        <div class="title__text">Tokenomics</div>
-      </div>
-      <div class="section__deco">
-        <img
-          src="/img/icons/icon__flower.svg"
-          alt=""
-          class="deco__pattern img section__img"
-        >
-      </div>
-
-      <div
-        class="token__numbers"
-        data-aos="fade-up"
-        data-aos-duration="800"
-      >5,555</div>
-      <div
-        class="token__textbox"
-        data-aos="fade-up"
-        data-aos-duration="800"
-      >
-        <div class="token__text token__text_big deco__w_700 deco__uline">total Ethereum - based Helix NFTs</div>
-        <div class="token__text token__text_l deco__i">will be minted in the first drop.</div>
-
-      </div>
-
-      <div
-        class="token__arrow-box"
-        data-aos="zoom-in"
-        data-aos-duration="800"
-      >
-        <img
-          src="/img/icons/icon__arrow_r.svg"
-          alt=""
-          class="deco__pattern img token__img control-diagram token__control"
-        >
-      </div>
-      {% set inject = {
-      "parentClass": "token__diagram"
-      } %}
-      {% include "blocks/diagram/diagram.njk" %}
-
-      <div class="token__textbox">
-        <span
-          class="token__text token__text_big deco__w_700 deco__uline"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
-          <span class="token__init">5,000 Helixes</span>
-          <span class="token__active">555 NFTs will be kept by the team</span>
-        </span>
-        <span
-          class="token__text token__text_l deco__i"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
-
-
-          <span class="token__init">will be up for sale</span>
-          <span class="token__active">
-            for marketing and general promotional
-            purposes.
-          </span>
-        </span>
-      </div>
+<div class="token">
+    <div class="token__inner">
+        <div class="section__cell">
+            <div class="section__number">6,000</div>
+            <div class="section__about">
+                <span class="deco__w deco__w_700">total Ethereum - based Helix NFTs</span>
+                <br>
+                will be minted in the first drop.
+            </div>
+            {% include "blocks/token/token-item.njk" %}
+        </div>
     </div>
+</div>
 
-  </div>
-</section>

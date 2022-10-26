@@ -31,7 +31,13 @@
     deco: true
     } %}
     {% include "sections/benefit-section.njk" %}
-    <!-- {% include "blocks/token/token.njk" %} -->
+    {% set inject = {
+    wrapper: 'wrap',
+    sectionTitle: 'Tokenomics',
+    sectionClass: '',
+    deco: true
+    } %}
+    {% include "sections/token-section.njk" %}
     <!-- {% include "sections/section-bg.njk" %} -->
     <!-- {% include "blocks/footer/footer.njk" %} -->
     <br>
