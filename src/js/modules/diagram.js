@@ -2,13 +2,13 @@ import $ from 'jquery'
 const diagram = {
   item_control: {
     state_first: {
-      rotate: -90,
+      rotate: 0,
     },
     state_second: {
-      rotate: -180,
+      rotate: -90,
     },
     state_third: {
-      rotate: -270,
+      rotate: -180,
     },
   },
   item_first: {
@@ -56,7 +56,7 @@ const diagram = {
       text: '444',
     },
   },
-  text: {
+  item_text: {
     state_first: {
       line_first: '5,000 Helixes',
       line_second: 'will be up for sale',
@@ -83,6 +83,7 @@ $(() => {
         phaseItem(state, 'second')
         phaseItem(state, 'third')
         phaseArrow(state)
+        phaseText(state)
         state = 'second'
         break
       case 'second':
@@ -90,6 +91,7 @@ $(() => {
         phaseItem(state, 'second')
         phaseItem(state, 'third')
         phaseArrow(state)
+        phaseText(state)
         state = 'third'
         break
       case 'third':
@@ -97,13 +99,29 @@ $(() => {
         phaseItem(state, 'second')
         phaseItem(state, 'third')
         phaseArrow(state)
+        phaseText(state)
         state = 'first'
         break
     }
   })
+  const getPhaseData = (phase, item) =>
+    diagram[`item_${item}`][`state_${phase}`]
+  const animationText = ($elem, text, duration) => {
+    $elem.fadeOut(duration, function () {
+      $(this).html(text).fadeIn(duration)
+    })
+  }
+  const phaseText = (phase) => {
+    const { line_first, line_second } = getPhaseData(phase, 'text')
+    const $textBox = $('.diagram__textbox')
+    const $textLineFirst = $textBox.find('.diagram__text_first')
+    const $textLineSecond = $textBox.find('.diagram__text_second')
+    animationText($textLineFirst, line_first, 125)
+    animationText($textLineSecond, line_second, 125)
+  }
   const phaseArrow = (phase) => {
-    const currentItemState = diagram[`item_control`][`state_${phase}`]
-    const rotate = currentItemState.rotate
+    const data = getPhaseData(phase, 'control')
+    const rotate = data.rotate
     $control.css({ transform: `rotate(${rotate}deg)` })
   }
   const phaseItem = (phase, elem) => {
@@ -111,18 +129,17 @@ $(() => {
     const $svg = $item.find(`.diagram__svg`)
     const $circle = $svg.find('.diagram__circle')
     const $value = $item.find('.diagram__value')
-    const currentItemState = diagram[`item_${elem}`][`state_${phase}`]
-    const rotate = currentItemState.rotate
-    const stroke = currentItemState.dash
+    const data = getPhaseData(phase, elem)
+
+    console.dir({ data })
+    const { rotate, dash } = data
     if (elem === 'third') {
-      // $text.html(currentItemState.text).fadeIn(400)
-      $value.fadeOut(125, function () {
-        $(this).html(currentItemState.text).fadeIn(125)
-      })
+      const { text } = data
+      animationText($value, text, 125)
       return
     }
     $svg.css({ transform: `rotate(${rotate}deg)` })
 
-    $circle.attr('stroke-dasharray', stroke)
+    $circle.attr('stroke-dasharray', dash)
   }
 })
