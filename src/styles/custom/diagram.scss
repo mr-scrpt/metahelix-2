@@ -10,6 +10,8 @@
     width: 100%;
   }
   &__item {
+    transform: rotate(-90deg);
+
     &_first {
       width: 300px;
       height: 300px;
@@ -18,11 +20,34 @@
         height: 450px;
       }
     }
+    &_second {
+      width: 270px;
+      height: 270px;
+      @include bp994-block() {
+        width: 410px;
+        height: 410px;
+      }
+    }
+    &_third {
+      width: 180px;
+      height: 180px;
+      @include bp994-block() {
+        width: 250px;
+        height: 250px;
+      }
+    }
   }
   &__circle {
     &_first {
-      opacity: 0.5;
-      stroke: $color_blue;
+      opacity: 0.7;
+      stroke-width: 70px;
+    }
+    &_second {
+      stroke: $color_blue_light;
+      stroke-width: 70px;
+    }
+    &_third {
+      fill: $color_light;
     }
   }
   // &__circle {
