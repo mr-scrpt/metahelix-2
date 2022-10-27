@@ -56,6 +56,20 @@ const diagram = {
       text: '444',
     },
   },
+  text: {
+    state_first: {
+      line_first: '5,000 Helixes',
+      line_second: 'will be up for sale',
+    },
+    state_second: {
+      line_first: '555 NFTs will be kept by the team',
+      line_second: 'for marketing and general promotional purpuses',
+    },
+    state_third: {
+      line_first: '445 Helixes will be given',
+      line_second: "away to the first collection's NFT holders",
+    },
+  },
 }
 
 $(() => {
@@ -96,13 +110,13 @@ $(() => {
     const $item = $(`.diagram__item_${elem}`)
     const $svg = $item.find(`.diagram__svg`)
     const $circle = $svg.find('.diagram__circle')
-    const $text = $item.find('.diagram__text')
+    const $value = $item.find('.diagram__value')
     const currentItemState = diagram[`item_${elem}`][`state_${phase}`]
     const rotate = currentItemState.rotate
     const stroke = currentItemState.dash
     if (elem === 'third') {
       // $text.html(currentItemState.text).fadeIn(400)
-      $text.fadeOut(125, function () {
+      $value.fadeOut(125, function () {
         $(this).html(currentItemState.text).fadeIn(125)
       })
       return
