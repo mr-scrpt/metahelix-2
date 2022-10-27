@@ -6,6 +6,9 @@
   &__controlbox {
     width: 100%;
   }
+  &__control {
+    transition: transform $th;
+  }
   &__diagrambox {
     position: relative;
 

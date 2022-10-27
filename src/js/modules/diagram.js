@@ -1,5 +1,16 @@
 import $ from 'jquery'
 const diagram = {
+  item_control: {
+    state_first: {
+      rotate: -90,
+    },
+    state_second: {
+      rotate: -180,
+    },
+    state_third: {
+      rotate: -270,
+    },
+  },
   item_first: {
     state_first: {
       index: 2,
@@ -49,31 +60,38 @@ const diagram = {
 
 $(() => {
   let state = 'second'
-  const $control = $('.diagram__control')
 
+  const $control = $('.diagram__control')
   $control.on('click', () => {
     switch (state) {
       case 'first':
         phaseItem(state, 'first')
         phaseItem(state, 'second')
         phaseItem(state, 'third')
+        phaseArrow(state)
         state = 'second'
         break
       case 'second':
         phaseItem(state, 'first')
         phaseItem(state, 'second')
         phaseItem(state, 'third')
+        phaseArrow(state)
         state = 'third'
         break
       case 'third':
         phaseItem(state, 'first')
         phaseItem(state, 'second')
         phaseItem(state, 'third')
+        phaseArrow(state)
         state = 'first'
         break
     }
   })
-
+  const phaseArrow = (phase) => {
+    const currentItemState = diagram[`item_control`][`state_${phase}`]
+    const rotate = currentItemState.rotate
+    $control.css({ transform: `rotate(${rotate}deg)` })
+  }
   const phaseItem = (phase, elem) => {
     const $item = $(`.diagram__item_${elem}`)
     const $svg = $item.find(`.diagram__svg`)
