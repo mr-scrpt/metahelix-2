@@ -1,12 +1,38 @@
 .diagram {
-  &__circle {
-    width: 150px;
-    aspect-ratio: 1;
-    display: inline-grid;
-    place-content: center;
-    margin: 5px;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: sans-serif;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
   }
+  &__controlbox {
+    width: 100%;
+  }
+  &__diagrambox {
+    width: 100%;
+  }
+  &__item {
+    &_first {
+      width: 300px;
+      height: 300px;
+      @include bp994-block() {
+        width: 450px;
+        height: 450px;
+      }
+    }
+  }
+  &__circle {
+    &_first {
+      opacity: 0.5;
+      stroke: $color_blue;
+    }
+  }
+  // &__circle {
+  //   width: 150px;
+  //   aspect-ratio: 1;
+  //   display: inline-grid;
+  //   place-content: center;
+  //   margin: 5px;
+  //   font-size: 25px;
+  //   font-weight: bold;
+  //   font-family: sans-serif;
+  // }
 }
