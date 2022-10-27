@@ -5,3 +5,4 @@
 import './modules/block-s.js'
 import './modules/feature.js'
 import './modules/benefit.js'
+import './modules/diagram.js'
