@@ -58,5 +58,20 @@ $(() => {
   const $circle_second = $svg_second.find('.diagram__circle')
   const $circle_third = $svg_third.find('.diagram__circle')
 
-  console.log('ff', $svg_first, $svg_second, $svg_third)
+  $control.on('click', () => {
+    switch (state) {
+      case 1:
+        console.log('state 1', state)
+        state++
+        break
+      case 2:
+        console.log('state 2', state)
+        state++
+        break
+      case 3:
+        console.log('state 3', state)
+        state = 1
+        break
+    }
+  })
 })
