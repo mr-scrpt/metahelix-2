@@ -51,6 +51,7 @@
     }
   }
   &__svg {
+    transition: transform $th;
     &_first {
       // transform: rotate(150deg);
       transform: rotate(150deg);

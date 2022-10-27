@@ -61,20 +61,20 @@ $(() => {
     switch (state) {
       case 'first':
         phaseItem(state, 'first')
-        phaseItem(state, 'second')
-        phaseItem(state, 'third')
+        // phaseItem(state, 'second')
+        // phaseItem(state, 'third')
         state = 'second'
         break
       case 'second':
         phaseItem(state, 'first')
-        phaseItem(state, 'second')
-        phaseItem(state, 'third')
+        // phaseItem(state, 'second')
+        // phaseItem(state, 'third')
         state = 'third'
         break
       case 'third':
         phaseItem(state, 'first')
-        phaseItem(state, 'second')
-        phaseItem(state, 'third')
+        // phaseItem(state, 'second')
+        // phaseItem(state, 'third')
         state = 'first'
         break
     }
@@ -89,7 +89,7 @@ $(() => {
     const stroke = currentItemState.dash
     console.log('rotate', rotate)
     console.log('stroke', stroke)
-    $svg.css({ transform: `rotate(${rotate})` })
+    $svg.css({ transform: `rotate(${rotate}deg)` })
     $circle.attr('strokeDasharray', stroke)
   }
 })
