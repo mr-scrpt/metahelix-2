@@ -26,12 +26,12 @@ const diagram = {
     state_second: {
       index: 2,
       rotate: '113',
-      dash: '310,345.5',
+      dash: '345.5,345.5',
     },
     state_third: {
       index: 2,
       rotate: 113,
-      dash: '310,345.5',
+      dash: '345.5,345.5',
     },
   },
   item_third: {
@@ -48,7 +48,7 @@ const diagram = {
 }
 
 $(() => {
-  let state = 'first'
+  let state = 'second'
   const $control = $('.diagram__control')
   // const $svg_second = $('.diagram__svg_second')
   // const $svg_third = $('.diagram__svg_third')
@@ -61,19 +61,19 @@ $(() => {
     switch (state) {
       case 'first':
         phaseItem(state, 'first')
-        // phaseItem(state, 'second')
+        phaseItem(state, 'second')
         // phaseItem(state, 'third')
         state = 'second'
         break
       case 'second':
         phaseItem(state, 'first')
-        // phaseItem(state, 'second')
+        phaseItem(state, 'second')
         // phaseItem(state, 'third')
         state = 'third'
         break
       case 'third':
         phaseItem(state, 'first')
-        // phaseItem(state, 'second')
+        phaseItem(state, 'second')
         // phaseItem(state, 'third')
         state = 'first'
         break
@@ -87,9 +87,11 @@ $(() => {
     const currentItemState = diagram[`item_${elem}`][`state_${phase}`]
     const rotate = currentItemState.rotate
     const stroke = currentItemState.dash
-    console.log('rotate', rotate)
-    console.log('stroke', stroke)
+    if (elem === 'third') {
+      return
+    }
     $svg.css({ transform: `rotate(${rotate}deg)` })
-    $circle.attr('strokeDasharray', stroke)
+
+    $circle.attr('stroke-dasharray', stroke)
   }
 })

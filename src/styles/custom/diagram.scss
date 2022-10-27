@@ -74,6 +74,18 @@
       fill: $color_light;
     }
   }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: $color_blue;
+
+    font-size: 38px;
+    font-weight: 700;
+  }
   // &__circle {
   //   width: 150px;
   //   aspect-ratio: 1;
