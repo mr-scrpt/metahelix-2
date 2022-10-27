@@ -50,44 +50,43 @@ const diagram = {
 $(() => {
   let state = 'second'
   const $control = $('.diagram__control')
-  // const $svg_second = $('.diagram__svg_second')
-  // const $svg_third = $('.diagram__svg_third')
-
-  // const $circle_first = $svg_first.find('.diagram__circle')
-  // const $circle_second = $svg_second.find('.diagram__circle')
-  // const $circle_third = $svg_third.find('.diagram__circle')
 
   $control.on('click', () => {
     switch (state) {
       case 'first':
         phaseItem(state, 'first')
         phaseItem(state, 'second')
-        // phaseItem(state, 'third')
+        phaseItem(state, 'third')
         state = 'second'
         break
       case 'second':
         phaseItem(state, 'first')
         phaseItem(state, 'second')
-        // phaseItem(state, 'third')
+        phaseItem(state, 'third')
         state = 'third'
         break
       case 'third':
         phaseItem(state, 'first')
         phaseItem(state, 'second')
-        // phaseItem(state, 'third')
+        phaseItem(state, 'third')
         state = 'first'
         break
     }
   })
 
   const phaseItem = (phase, elem) => {
-    console.log('in phase')
-    const $svg = $(`.diagram__svg_${elem}`)
+    const $item = $(`.diagram__item_${elem}`)
+    const $svg = $item.find(`.diagram__svg`)
     const $circle = $svg.find('.diagram__circle')
+    const $text = $item.find('.diagram__text')
     const currentItemState = diagram[`item_${elem}`][`state_${phase}`]
     const rotate = currentItemState.rotate
     const stroke = currentItemState.dash
     if (elem === 'third') {
+      // $text.html(currentItemState.text).fadeIn(400)
+      $text.fadeOut(125, function () {
+        $(this).html(currentItemState.text).fadeIn(125)
+      })
       return
     }
     $svg.css({ transform: `rotate(${rotate}deg)` })
