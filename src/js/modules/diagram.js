@@ -60,31 +60,36 @@ $(() => {
   $control.on('click', () => {
     switch (state) {
       case 'first':
-        phaseItem(state)
+        phaseItem(state, 'first')
+        phaseItem(state, 'second')
+        phaseItem(state, 'third')
         state = 'second'
         break
       case 'second':
-        phaseItem(state)
+        phaseItem(state, 'first')
+        phaseItem(state, 'second')
+        phaseItem(state, 'third')
         state = 'third'
         break
       case 'third':
-        phaseItem(state)
+        phaseItem(state, 'first')
+        phaseItem(state, 'second')
+        phaseItem(state, 'third')
         state = 'first'
         break
     }
   })
 
-  const phaseItem = (phase) => {
+  const phaseItem = (phase, elem) => {
     console.log('in phase')
-    const $svg = $(`.diagram__svg_${phase}`)
+    const $svg = $(`.diagram__svg_${elem}`)
     const $circle = $svg.find('.diagram__circle')
-
-    if (phase === 1) {
-      const currentItemState = diagram[`item_${phase}`][`state_${phase}`]
-      const rotate = currentItemState.rotate
-      const stroke = currentItemState.stroke
-      $svg.css({ transform: `rotate(${rotate})` })
-      $circle.attr('strokeDasharray', stroke)
-    }
+    const currentItemState = diagram[`item_${elem}`][`state_${phase}`]
+    const rotate = currentItemState.rotate
+    const stroke = currentItemState.dash
+    console.log('rotate', rotate)
+    console.log('stroke', stroke)
+    $svg.css({ transform: `rotate(${rotate})` })
+    $circle.attr('strokeDasharray', stroke)
   }
 })
