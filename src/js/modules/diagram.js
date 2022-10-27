@@ -48,30 +48,43 @@ const diagram = {
 }
 
 $(() => {
-  let state = 1
+  let state = 'first'
   const $control = $('.diagram__control')
-  const $svg_first = $('.diagram__svg_first')
-  const $svg_second = $('.diagram__svg_second')
-  const $svg_third = $('.diagram__svg_third')
+  // const $svg_second = $('.diagram__svg_second')
+  // const $svg_third = $('.diagram__svg_third')
 
-  const $circle_first = $svg_first.find('.diagram__circle')
-  const $circle_second = $svg_second.find('.diagram__circle')
-  const $circle_third = $svg_third.find('.diagram__circle')
+  // const $circle_first = $svg_first.find('.diagram__circle')
+  // const $circle_second = $svg_second.find('.diagram__circle')
+  // const $circle_third = $svg_third.find('.diagram__circle')
 
   $control.on('click', () => {
     switch (state) {
-      case 1:
-        console.log('state 1', state)
-        state++
+      case 'first':
+        phaseItem(state)
+        state = 'second'
         break
-      case 2:
-        console.log('state 2', state)
-        state++
+      case 'second':
+        phaseItem(state)
+        state = 'third'
         break
-      case 3:
-        console.log('state 3', state)
-        state = 1
+      case 'third':
+        phaseItem(state)
+        state = 'first'
         break
     }
   })
+
+  const phaseItem = (phase) => {
+    console.log('in phase')
+    const $svg = $(`.diagram__svg_${phase}`)
+    const $circle = $svg.find('.diagram__circle')
+
+    if (phase === 1) {
+      const currentItemState = diagram[`item_${phase}`][`state_${phase}`]
+      const rotate = currentItemState.rotate
+      const stroke = currentItemState.stroke
+      $svg.css({ transform: `rotate(${rotate})` })
+      $circle.attr('strokeDasharray', stroke)
+    }
+  }
 })
