@@ -14,6 +14,11 @@
   &__wrap {
     @include wrapper;
   }
+  &__slim {
+    max-width: 1000px;
+    margin: 0 auto;
+    @include wrapper-full();
+  }
 
   &__full {
     max-width: 1920px;

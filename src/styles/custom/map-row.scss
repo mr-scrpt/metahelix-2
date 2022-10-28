@@ -1,0 +1,37 @@
+.map-row {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__cell {
+    width: 100%;
+
+    @include bp994-block() {
+      width: 50%;
+    }
+  }
+  &__span {
+    display: flex;
+    justify-content: center;
+
+    padding: 25px 15px;
+    width: 100%;
+
+    border-radius: 40px;
+    background: $gradient_bg_light;
+  }
+  &__textbox {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    // width: 230px;
+  }
+  &__text-line {
+    font-size: 24px;
+    line-height: 24px;
+    @include bp994-block() {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+}

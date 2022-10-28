@@ -1,9 +1,7 @@
 <div class="map">
     <div class="map__inner">
-        <div class="map__list">
-            {% for item in map.map_list %}
-                {% include "blocks/map/map-row.njk" %}
-            {% endfor %}
-        </div>
+        {% for item in map.map_list %}
+            {% include "blocks/map/map-row.njk" %}
+        {% endfor %}
     </div>
 </div>
