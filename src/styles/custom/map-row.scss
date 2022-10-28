@@ -6,8 +6,8 @@
     flex-wrap: wrap;
     &::after {
       position: absolute;
-      left: 50%;
       bottom: 50%;
+      left: 50%;
 
       width: 304px;
       height: 97.1px;
@@ -20,8 +20,8 @@
       background-repeat: no-repeat;
     }
     @include bp994-block() {
-      margin-bottom: -15px;
       margin-top: -15px;
+      margin-bottom: -15px;
     }
   }
   &__cell {
@@ -39,15 +39,16 @@
 
     width: 100%;
 
+    margin-left: 0;
+
     padding: 35px 15px;
 
-    margin-left: 0;
     border-radius: 40px;
     background: $gradient_bg_light;
     @include bp994-block() {
+      width: calc(100% - 25px);
       margin-right: 25px;
       margin-left: 0;
-      width: calc(100% - 25px);
     }
     // &::after {
     //   position: absolute;
@@ -83,18 +84,20 @@
 .map-row:nth-child(even) {
   .map-row__inner {
     &::after {
-      background-image: url('../img/deco/deco_line_to_left.svg');
-      left: auto;
       right: 50%;
+      left: auto;
+
       transform: translate(25px, 48.55px);
+
+      background-image: url('../img/deco/deco_line_to_left.svg');
     }
   }
   .map-row__span {
     flex-direction: row-reverse;
     @include bp994-block() {
-      margin-left: 25px;
-      margin-right: 0;
       width: calc(100% - 25px);
+      margin-right: 0;
+      margin-left: 25px;
     }
   }
   .map-row__textbox {
@@ -104,6 +107,13 @@
   @include bp994-block() {
     .map-row__inner {
       flex-direction: row-reverse;
+    }
+  }
+}
+.map-row:last-child {
+  .map-row__inner {
+    &::after {
+      display: none;
     }
   }
 }
