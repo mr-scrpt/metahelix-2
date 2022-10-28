@@ -1,11 +1,13 @@
 {% extends "layouts/layout.njk" %}
 {% block main %}
     {% set inject = {
-    wrapper: 'wrap'
+    wrapper: 'wrap',
+    sectionInner: 'section__inner_top'
     } %}
     {% include "sections/header-section.njk" %}
     {% set inject = {
     wrapper: 'wrap',
+    sectionInner: '',
     sectionClass: 'page__clump',
     deco: true
     } %}
@@ -21,6 +23,7 @@
     wrapper: 'wrap',
     sectionTitle: 'Feature',
     sectionClass: '',
+    scrollTo: 'about',
     deco: true
     } %}
     {% include "sections/feature-section.njk" %}
@@ -28,6 +31,7 @@
     wrapper: 'slim',
     sectionTitle: 'Holders benefits',
     sectionClass: '',
+    scrollTo: 'benefit',
     deco: true
     } %}
     {% include "sections/benefit-section.njk" %}
@@ -36,6 +40,7 @@
         wrapper: 'slim',
         sectionTitle: 'Tokenomics',
         sectionClass: '',
+        scrollTo: 'token',
         deco: true
         } %}
         {% include "sections/token-section.njk" %}
@@ -43,6 +48,7 @@
         wrapper: 'slim',
         sectionTitle: 'HelixMap',
         sectionClass: '',
+        scrollTo: 'map',
         deco: true
         } %}
         {% include "sections/map-section.njk" %}
