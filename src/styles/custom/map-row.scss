@@ -14,16 +14,18 @@
     display: flex;
     justify-content: center;
 
-    padding: 25px 15px;
     width: 100%;
+
+    padding: 25px 15px;
 
     border-radius: 40px;
     background: $gradient_bg_light;
   }
   &__textbox {
-    margin-left: 15px;
     display: flex;
     align-items: center;
+
+    margin-left: 15px;
     // width: 230px;
   }
   &__text-line {
@@ -33,5 +35,19 @@
       font-size: 30px;
       line-height: 30px;
     }
+  }
+}
+.map-row:nth-child(even) {
+  @include bp994-block() {
+    .map-row__inner {
+      flex-direction: row-reverse;
+    }
+  }
+  .map-row__span {
+    flex-direction: row-reverse;
+  }
+  .map-row__textbox {
+    margin-left: 0;
+    margin-right: 15px;
   }
 }
