@@ -46,47 +46,14 @@
         deco: true
         } %}
         {% include "sections/map-section.njk" %}
-        <!-- {% include "blocks/footer/footer.njk" %} -->
+        {% set inject = {
+        wrapper: 'wrap',
+        sectionTitle: 'Artworks',
+        sectionClass: 'page__section_last',
+        deco: false
+        } %}
+        {% include "sections/work-section.njk" %}
     </div>
+    {% include "blocks/footer/footer.njk" %}
     <!-- {% include "sections/section-bg.njk" %} -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 {% endblock main %}

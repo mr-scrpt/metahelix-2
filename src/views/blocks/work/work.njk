@@ -1,41 +1,11 @@
-<section class="work page__work section">
-  <div class="section__inner">
-    <div class="section__box layout__wrap work__box">
-      <div class="section__title title title_main">
-        <div class="title__text">
-          Artworks
+<div class="work">
+    <div class="work__inner">
+        <div class="work__list">
+            {% set works = [1, 2, 3, 4, 5, 6] %}
+            {% for work in works %}
+                {% include "blocks/work/work-item.njk" %}
+            {% endfor %}
         </div>
-      </div>
-      <div class="section__deco">
-        <img
-          src="/img/icons/icon__flower.svg"
-          alt=""
-          class="deco__pattern img section__img"
-        >
-      </div>
-
-      <div class="work__list">
-        {% set works = [1, 2, 3, 4, 5, 6] %}
-        {% for work in works %}
-        <div
-          class="work__item work-item work-item_init"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-delay="{{ loop.index * 200}}"
-        >
-          <div class="work-item__inner">
-            <img
-              src="/img/works/work_{{work}}.jpg"
-              alt=""
-              class="work-item__img img"
-            >
-          </div>
-
-        </div>
-
-        {% endfor %}
-      </div>
-
     </div>
-  </div>
-</section>
+</div>
+

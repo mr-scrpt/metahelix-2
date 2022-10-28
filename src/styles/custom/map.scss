@@ -5,5 +5,11 @@
   }
   &__row {
     width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    @include bp994-block() {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }

@@ -4,20 +4,24 @@
     align-items: center;
     //overflow: hidden;
     justify-content: center;
-  }
 
-  &__img {
+    width: 300px;
+    height: 300px;
+    padding: 25px;
+
     transition: all 0.3s;
 
     border-radius: 40px;
+    background: $gradient_bg_light;
+  }
+
+  &__img {
+    border-radius: 14px;
   }
 }
 
-.work-item.work-item_init {
-}
-
 .work-item.work-item_active {
-  .work-item__img {
+  .work-item__inner {
     border-radius: 50%;
   }
 }

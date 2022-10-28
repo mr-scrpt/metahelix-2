@@ -19,6 +19,14 @@ $gradient_bg: linear-gradient(
     #085788 71.51%
   ),
   #d9d9d9;
+$gradient__body: linear-gradient(
+    201.51deg,
+    #061620 -18.28%,
+    #095788 44.8%,
+    #085788 100.25%
+  ),
+  linear-gradient(218.07deg, #399cdc 6.37%, #031f31 114.95%), #d9d9d9;
+
 $gradient_bg_tmp: linear-gradient(
   195.1deg,
   #111631 10.4%,

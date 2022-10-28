@@ -1,4 +1,8 @@
 .section {
+  &__inner {
+    // position: relative;
+    // z-index: 3;
+  }
   &__title {
     display: flex;
     justify-content: center;

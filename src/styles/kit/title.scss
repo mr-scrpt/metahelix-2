@@ -2,7 +2,11 @@
   & .title__text {
     font-size: 36px;
     font-weight: 700;
-    line-height: 48px;
+    line-height: 44px;
+    @include bp994-block() {
+      font-size: 48px;
+      line-height: 54px;
+    }
   }
 }
 

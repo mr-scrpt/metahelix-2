@@ -1,21 +1,24 @@
 .work {
-  &__box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  &__inner {
   }
   &__list {
-    max-width: 960px;
-    @include row-flex();
-  }
+    display: flex;
+    flex-wrap: wrap;
 
+    margin-left: -25px;
+    margin-right: -25px;
+  }
   &__item {
     position: relative;
     z-index: 1;
-
-    margin-bottom: 15px;
-    @include col();
-    @include size(6);
-    @include size-bp768(4);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+    @include bp994-block() {
+      width: calc(33.3333% - 50px);
+      margin-right: 25px;
+      margin-left: 25px;
+    }
   }
 }

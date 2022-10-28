@@ -14,17 +14,45 @@
   user-select: none;
   white-space: nowrap;
   text-decoration: none;
-
+  overflow: hidden;
   color: #fff;
 
   outline: 0;
-  background-color: $color_passive;
-
   touch-action: manipulation;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    @include ts(opacity);
+    background: $color_gray;
+  }
+  &::after {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    @include ts(opacity);
+    background: $gradient_bg_light;
+  }
   & .button__text {
     position: relative;
-
+    z-index: 1;
     display: inline-block;
     overflow: hidden;
 
@@ -41,7 +69,19 @@
   /* HOVER */
   &:hover {
     cursor: pointer;
+
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+    & .button__text {
+      color: $color_light;
+    }
   }
+
+  @include ts(background);
 }
 
 /* Модификаторы */
@@ -99,6 +139,7 @@
   line-height: 22px;
   @include bp994-block() {
     border-radius: 85px;
+
     font-size: 30px;
     line-height: 30px;
   }

@@ -5,19 +5,21 @@
     display: flex;
     flex-wrap: wrap;
     &::after {
-      position: absolute;
-      bottom: 50%;
-      left: 50%;
+      @include bp994-block() {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
 
-      width: 304px;
-      height: 97.1px;
+        width: 304px;
+        height: 97.1px;
 
-      content: '';
+        content: '';
 
-      transform: translate(-25px, 48.55px);
+        transform: translate(-25px, 48.55px);
 
-      background-image: url('../img/deco/deco_line_to_right.svg');
-      background-repeat: no-repeat;
+        background-image: url('../img/deco/deco_line_to_right.svg');
+        background-repeat: no-repeat;
+      }
     }
     @include bp994-block() {
       margin-top: -15px;
@@ -44,7 +46,46 @@
     padding: 35px 15px;
 
     border-radius: 40px;
-    background: $gradient_bg_light;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: '';
+
+      @include ts(opacity);
+      background: $gradient_bg_light;
+    }
+    &::after {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: '';
+
+      @include ts(opacity);
+      background: $color_blue;
+    }
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
     @include bp994-block() {
       width: calc(100% - 25px);
       margin-right: 25px;
@@ -65,10 +106,15 @@
     //   background-repeat: no-repeat;
     // }
   }
+  &__img {
+    position: relative;
+    z-index: 1;
+  }
   &__textbox {
     display: flex;
     align-items: center;
-
+    position: relative;
+    z-index: 1;
     margin-left: 15px;
     // width: 230px;
   }
@@ -102,6 +148,7 @@
   }
   .map-row__textbox {
     margin-right: 15px;
+    text-align: right;
     margin-left: 0;
   }
   @include bp994-block() {

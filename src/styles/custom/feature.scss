@@ -14,11 +14,11 @@
     @include row-flex();
   }
   &__item {
+    overflow: hidden;
+
     margin-bottom: 30px;
 
     border-radius: 12px;
-
-    overflow: hidden;
     &:nth-child(1) {
       border-top-left-radius: 70px;
       border-top-right-radius: 70px;

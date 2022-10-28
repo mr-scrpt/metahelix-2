@@ -24,7 +24,7 @@ $offset_bp1100_one_side: ($offset_bp1100 / 2);
 $offset_bp1440_one_side: ($offset_bp1440 / 2);
 $offset_bp1620_one_side: ($offset_bp1620 / 2);
 
-$fields: 15px;
+$fields: 25px;
 
 @mixin wrapper-full() {
   padding-right: $fields;
