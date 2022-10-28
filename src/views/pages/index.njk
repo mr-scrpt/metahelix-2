@@ -31,15 +31,24 @@
     deco: true
     } %}
     {% include "sections/benefit-section.njk" %}
-    {% set inject = {
-    wrapper: 'wrap',
-    sectionTitle: 'Tokenomics',
-    sectionClass: '',
-    deco: true
-    } %}
-    {% include "sections/token-section.njk" %}
+    <div class="page__section-bg">
+        {% set inject = {
+        wrapper: 'wrap',
+        sectionTitle: 'Tokenomics',
+        sectionClass: '',
+        deco: true
+        } %}
+        {% include "sections/token-section.njk" %}
+        {% set inject = {
+        wrapper: 'wrap',
+        sectionTitle: 'HelixMap',
+        sectionClass: '',
+        deco: true
+        } %}
+        {% include "sections/map-section.njk" %}
+        <!-- {% include "blocks/footer/footer.njk" %} -->
+    </div>
     <!-- {% include "sections/section-bg.njk" %} -->
-    <!-- {% include "blocks/footer/footer.njk" %} -->
     <br>
     <br>
     <br>

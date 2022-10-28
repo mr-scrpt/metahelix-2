@@ -1,5 +1,7 @@
 .page {
   position: relative;
+
+  overflow-x: hidden;
   &_theme {
     color: $color_light;
     background: $gradient_bg;
@@ -83,6 +85,9 @@
     }
   }
   &__section {
+    position: relative;
+    z-index: 3;
+
     margin-bottom: 50px;
     @include bp994-block() {
       margin-bottom: 50px;
@@ -91,9 +96,7 @@
   &__section-bg {
     position: relative;
 
-    margin-top: -1000px;
     //margin-bottom: -1000px;
-    padding-top: 1000px;
     //padding-bottom: 1000px;
     &::after {
       position: absolute;
@@ -112,6 +115,21 @@
     }
   }
   &__footer {
-    margin-top: 20px;
+    // position: relative;
+
+    // margin-top: 20px;
+    // &::after {
+    //   position: absolute;
+    //   z-index: 0;
+    //   top: -4000px;
+
+    //   width: 4000px;
+    //   height: 4000px;
+
+    //   content: '';
+
+    //   background: url('/img/bg/bg_big.png') no-repeat;
+    //   mix-blend-mode: multiply;
+    // }
   }
 }
