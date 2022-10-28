@@ -9,12 +9,12 @@
       left: 50%;
       bottom: 50%;
 
-      width: 440px;
-      height: 108px;
+      width: 304px;
+      height: 97.1px;
 
       content: '';
 
-      transform: translate(-50%, -50%);
+      transform: translate(-25px, 48.55px);
 
       background-image: url('../img/deco/deco_line_to_right.svg');
       background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 
     width: 100%;
 
-    padding: 25px 15px;
+    padding: 35px 15px;
 
     margin-left: 0;
     border-radius: 40px;
@@ -81,6 +81,14 @@
   }
 }
 .map-row:nth-child(even) {
+  .map-row__inner {
+    &::after {
+      background-image: url('../img/deco/deco_line_to_left.svg');
+      left: auto;
+      right: 50%;
+      transform: translate(25px, 48.55px);
+    }
+  }
   .map-row__span {
     flex-direction: row-reverse;
     @include bp994-block() {
@@ -99,3 +107,4 @@
     }
   }
 }
+
