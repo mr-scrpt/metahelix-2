@@ -14,9 +14,11 @@ $(document).ready(() => {
     const $body = $inner.children(`.${mainClass}__body`)
     const $controller = $menu.find(`.${mainClass}__controller`)
 
+    const $itemCollection = $menu.find(`.menu__item`)
     /*const $outerMenuBlock = $(".menu-info");*/
     clearClassAndStyle($menu, $body, mainClass, mobileSize)
     controllMenu($controller, mainClass, mobileSize)
+    controllMenu($itemCollection, mainClass, mobileSize)
     closeOutsideMenu($body, mainClass)
     adaptiveMode(mobileSize, $body)
     offsetBody($parent, $body, mobileSize)
@@ -92,7 +94,6 @@ const controllMenu = ($controller, mainClass, mobileSize) => {
     }
   })
 }
-
 const closeOutsideMenu = ($body, mainClass) => {
   $body.on('click', (e) => {
     e.stopPropagation()

@@ -2,19 +2,19 @@
   "menu": [
     {
       "name": "About",
-      "href": "/about"
+      "href": "about"
     },
     {
       "name": "Holders benefits",
-      "href": "/benefit"
+      "href": "benefit"
     },
     {
       "name": "Tokenomics",
-      "href": "/token"
+      "href": "token"
     },
     {
       "name": "HelixMap",
-      "href": "/map"
+      "href": "map"
     }
   ]
 }
