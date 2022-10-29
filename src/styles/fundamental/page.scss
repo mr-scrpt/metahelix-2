@@ -95,11 +95,18 @@
       }
     }
   }
+  // &__section_offset {
+  //   margin-bottom: 200px;
+  // }
   &__section-bg {
     position: relative;
 
-    //margin-bottom: -1000px;
-    //padding-bottom: 1000px;
+    margin-top: -700px;
+    padding-top: 700px;
+    @include bp994-block() {
+      margin-top: -400px;
+      padding-top: 400px;
+    }
     &::after {
       position: absolute;
       top: 0;

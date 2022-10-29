@@ -20,7 +20,7 @@ $(() => {
 const scrollTo = ($targe) => {
   $('html, body').animate(
     {
-      scrollTop: $targe.offset().top,
+      scrollTop: $targe.offset().top - 15,
     },
 
     {
