@@ -2,6 +2,10 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
+    @include bp994-block() {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
   }
   &__row {
     width: 100%;

@@ -59,8 +59,9 @@
 
       content: '';
 
-      background: $gradient_bg_light;
+      border-radius: 40px;
 
+      background: $gradient_bg_light;
       @include ts(opacity);
     }
     &::after {
@@ -76,6 +77,8 @@
       content: '';
 
       opacity: 0;
+
+      border-radius: 40px;
       background: $color_blue;
 
       @include ts(opacity);
@@ -132,6 +135,7 @@
   }
   &__deco {
     position: relative;
+
     height: 100%;
 
     @include bp994-block() {
@@ -166,9 +170,10 @@
   .map-row__deco {
     @include bp994-block() {
       &::after {
-        transform: scale(-1, 1);
-        left: auto;
         right: -25px;
+        left: auto;
+
+        transform: scale(-1, 1);
       }
     }
   }
