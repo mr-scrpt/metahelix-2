@@ -1,11 +1,11 @@
 .title_main {
   & .title__text {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 40px;
     @include bp994-block() {
-      font-size: 48px;
-      line-height: 54px;
+      font-size: 44px;
+      line-height: 50px;
     }
   }
 }

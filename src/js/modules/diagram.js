@@ -47,13 +47,13 @@ const diagram = {
   },
   item_third: {
     state_first: {
-      text: '5000',
+      text: '6,500',
     },
     state_second: {
       text: '555',
     },
     state_third: {
-      text: '444',
+      text: '445',
     },
   },
   item_text: {

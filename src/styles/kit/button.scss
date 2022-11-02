@@ -159,8 +159,8 @@
     &::after {
       border-radius: 85px;
     }
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 28px;
+    line-height: 28px;
   }
 }
 
@@ -168,7 +168,7 @@
   margin: 20px 100px;
 
   @include bp994-block() {
-    margin: 30px 160px;
+    margin: 25px 140px;
   }
 }
 /*XL - КОНЕЦ*/

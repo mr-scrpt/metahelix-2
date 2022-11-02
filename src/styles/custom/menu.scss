@@ -63,9 +63,9 @@
 
     color: $color_passive;
 
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 22px;
     &:hover {
       color: $color_blue;
     }
@@ -75,7 +75,7 @@
       font-size: 18px;
     }
     @include bp994-block() {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
   &__item-icon {
